@@ -1,0 +1,1415 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鸠摩智性吧 - 官方网站 | 深度内容社区与原创视频平台</title>
+<meta name="description" content="鸠摩智性吧官方网站，深耕理性讨论与知识分享的原创视频内容社区，汇聚优质创作者与企业力量，打造值得信赖的高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c1272d'/%3E%3Ccircle cx='22' cy='26' r='8' fill='%23fff'/%3E%3Ccircle cx='42' cy='26' r='8' fill='%23fff'/%3E%3Cpath d='M14 50c4-10 12-14 18-14s14 4 18 14' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --jm-red:#c1272d;
+  --jm-red-deep:#8c1a1f;
+  --jm-ink:#111114;
+  --jm-ink-soft:#2c2c33;
+  --jm-gray:#6b6b76;
+  --jm-line:#e4e4e9;
+  --jm-bg:#f7f7f9;
+  --jm-white:#ffffff;
+  --jm-shadow:0 8px 30px rgba(17,17,20,.08);
+  --jm-shadow-lg:0 18px 50px rgba(17,17,20,.14);
+  --jm-radius:14px;
+  --jm-maxw:1180px;
+  --jm-sticky-h:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--jm-sticky-h)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--jm-ink);
+  background:var(--jm-white);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.jm-container{width:100%;max-width:var(--jm-maxw);margin:0 auto;padding:0 22px}
+.jm-section{padding:64px 0}
+.jm-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--jm-red);font-weight:700;margin-bottom:12px;
+}
+.jm-eyebrow::before{content:"";width:22px;height:2px;background:var(--jm-red)}
+.jm-h2{
+  font-size:clamp(26px,3.4vw,38px);
+  line-height:1.25;font-weight:800;letter-spacing:-.01em;
+  margin-bottom:12px;
+}
+.jm-h3{font-size:19px;font-weight:700;line-height:1.4;margin-bottom:8px}
+.jm-lead{color:var(--jm-gray);max-width:760px;font-size:16px}
+.jm-sec-head{margin-bottom:36px}
+
+/* ---------- 公告条 + 页头 吸顶 ---------- */
+.jm-sticky-wrap{position:sticky;top:0;z-index:900}
+.jm-announce{
+  background:linear-gradient(90deg,var(--jm-ink) 0%,var(--jm-red-deep) 55%,var(--jm-red) 100%);
+  color:#fff;font-size:13.5px;
+}
+.jm-announce-inner{
+  max-width:var(--jm-maxw);margin:0 auto;padding:0 22px;
+  display:flex;align-items:center;gap:14px;height:38px;overflow:hidden;
+}
+.jm-announce-tag{
+  flex:none;background:#fff;color:var(--jm-red-deep);
+  font-size:11px;font-weight:800;letter-spacing:.08em;
+  padding:2px 8px;border-radius:4px;
+}
+.jm-announce-track{overflow:hidden;flex:1;position:relative;height:38px}
+.jm-announce-list{display:flex;flex-direction:column;animation:jmRoll 18s infinite;animation-timing-function:steps(1,end)}
+.jm-announce-list li{
+  height:38px;display:flex;align-items:center;gap:6px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.jm-announce-list li span{opacity:.72;font-size:12px}
+@keyframes jmRoll{
+  0%,22%{transform:translateY(0)}
+  25%,47%{transform:translateY(-38px)}
+  50%,72%{transform:translateY(-76px)}
+  75%,97%{transform:translateY(-114px)}
+  100%{transform:translateY(0)}
+}
+.jm-announce-more{flex:none;font-size:12px;opacity:.85;border-bottom:1px solid rgba(255,255,255,.45)}
+.jm-header{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--jm-line)}
+.jm-header-inner{
+  max-width:var(--jm-maxw);margin:0 auto;padding:0 22px;
+  display:flex;align-items:center;gap:22px;height:66px;
+}
+.jm-brand{display:flex;align-items:center;gap:10px;flex:none}
+.jm-brand-mark{
+  width:36px;height:36px;border-radius:10px;
+  background:var(--jm-red);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:17px;letter-spacing:-.5px;
+}
+.jm-brand-name{font-size:17px;font-weight:800;letter-spacing:.02em;line-height:1.1}
+.jm-brand-name small{display:block;font-size:10px;font-weight:600;color:var(--jm-gray);letter-spacing:.18em}
+.jm-nav{display:flex;align-items:center;gap:4px;margin-left:8px;flex:1}
+.jm-nav a{
+  font-size:14.5px;color:var(--jm-ink-soft);padding:8px 12px;border-radius:8px;
+  transition:.2s;font-weight:600;
+}
+.jm-nav a:hover{background:var(--jm-bg);color:var(--jm-red)}
+.jm-header-side{display:flex;align-items:center;gap:10px;flex:none}
+.jm-search{
+  display:flex;align-items:center;gap:6px;
+  background:var(--jm-bg);border:1px solid var(--jm-line);
+  border-radius:999px;padding:5px 6px 5px 14px;
+}
+.jm-search input{
+  border:none;background:transparent;outline:none;
+  font-size:13.5px;width:150px;color:var(--jm-ink);font-family:inherit;
+}
+.jm-search button{
+  width:30px;height:30px;border-radius:50%;background:var(--jm-red);color:#fff;
+  display:grid;place-items:center;font-size:14px;transition:.2s;
+}
+.jm-search button:hover{background:var(--jm-red-deep)}
+.jm-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-size:14px;font-weight:700;border-radius:999px;padding:11px 24px;
+  transition:transform .18s,box-shadow .18s,background .18s;white-space:nowrap;
+}
+.jm-btn:active{transform:scale(.97)}
+.jm-btn-primary{background:var(--jm-red);color:#fff;box-shadow:0 6px 18px rgba(193,39,45,.28)}
+.jm-btn-primary:hover{background:var(--jm-red-deep);box-shadow:0 10px 26px rgba(193,39,45,.34)}
+.jm-btn-ghost{border:1.5px solid var(--jm-line);color:var(--jm-ink-soft);background:#fff}
+.jm-btn-ghost:hover{border-color:var(--jm-red);color:var(--jm-red)}
+.jm-burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--jm-line);place-items:center}
+.jm-burger span{display:block;width:18px;height:2px;background:var(--jm-ink);position:relative}
+.jm-burger span::before,.jm-burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--jm-ink)}
+.jm-burger span::before{top:-6px}
+.jm-burger span::after{top:6px}
+.jm-mobile-nav{display:none;border-top:1px solid var(--jm-line);background:#fff}
+.jm-mobile-nav.open{display:block}
+.jm-mobile-nav a{display:block;padding:13px 22px;border-bottom:1px solid var(--jm-line);font-weight:600;font-size:15px}
+.jm-mobile-nav .jm-mobile-search{padding:14px 22px;display:flex;gap:8px}
+
+.jm-search-tip{
+  max-width:var(--jm-maxw);margin:0 auto;padding:0 22px 12px;font-size:13px;color:var(--jm-red);
+  display:none;
+}
+.jm-search-tip.show{display:block}
+
+/* ---------- 首屏 4:6 左文右图 ---------- */
+.jm-hero{
+  position:relative;background:
+    radial-gradient(900px 420px at 92% 0%,rgba(193,39,45,.10),transparent 62%),
+    linear-gradient(180deg,#fbfbfc,#ffffff 70%);
+  border-bottom:1px solid var(--jm-line);
+  overflow:hidden;
+}
+.jm-hero-grid{
+  display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);
+  gap:48px;align-items:center;padding:56px 0 64px;
+}
+.jm-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--jm-line);
+  padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;
+  color:var(--jm-ink-soft);box-shadow:var(--jm-shadow);margin-bottom:20px;
+}
+.jm-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--jm-red);display:block}
+.jm-h1{
+  font-size:clamp(38px,6vw,68px);line-height:1.06;
+  font-weight:900;letter-spacing:-.03em;margin-bottom:6px;
+}
+.jm-h1 em{font-style:normal;color:var(--jm-red)}
+.jm-hero-sub{
+  font-size:clamp(15px,1.6vw,19px);font-weight:700;color:var(--jm-ink-soft);
+  letter-spacing:.06em;margin-bottom:18px;
+}
+.jm-hero-intro{color:var(--jm-gray);font-size:15.5px;margin-bottom:26px;max-width:44ch}
+.jm-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;margin-bottom:28px;border-top:1px solid var(--jm-line);padding-top:20px;
+}
+.jm-stat b{display:block;font-size:clamp(20px,2.4vw,28px);font-weight:900;letter-spacing:-.02em;line-height:1.15}
+.jm-stat span{font-size:12.5px;color:var(--jm-gray);font-weight:600}
+.jm-hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.jm-hero-visual{position:relative}
+.jm-hero-visual img{
+  border-radius:18px;box-shadow:var(--jm-shadow-lg);
+  aspect-ratio:16/11;object-fit:cover;width:100%;
+  border:1px solid var(--jm-line);
+}
+.jm-hero-float{
+  position:absolute;left:-16px;bottom:26px;
+  background:#fff;border:1px solid var(--jm-line);border-radius:12px;
+  padding:12px 16px;box-shadow:var(--jm-shadow-lg);
+  display:flex;align-items:center;gap:12px;max-width:250px;
+}
+.jm-hero-float .jm-avatar{
+  width:38px;height:38px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,var(--jm-red),#f0787d);
+  color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;
+}
+.jm-hero-float b{font-size:13px;display:block}
+.jm-hero-float span{font-size:11.5px;color:var(--jm-gray)}
+.jm-live-dot{width:7px;height:7px;border-radius:50%;background:#e0245e;display:inline-block;margin-right:5px;animation:jmPulse 1.6s infinite}
+@keyframes jmPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+
+/* ---------- 通用卡片 ---------- */
+.jm-card{
+  background:#fff;border:1px solid var(--jm-line);border-radius:var(--jm-radius);
+  overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.jm-card:hover{transform:translateY(-4px);box-shadow:var(--jm-shadow-lg);border-color:#d8d8e0}
+.jm-tag{
+  display:inline-block;font-size:11.5px;font-weight:700;
+  color:var(--jm-red);background:rgba(193,39,45,.08);
+  padding:2px 9px;border-radius:6px;margin-right:6px;margin-bottom:4px;
+}
+
+/* ---------- 焦点 + 视频列表（一幅大图 + 文字列表） ---------- */
+.jm-focus-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:34px}
+.jm-focus-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--jm-line);box-shadow:var(--jm-shadow);background:#000}
+.jm-focus-card img{aspect-ratio:4/3;object-fit:cover;width:100%;opacity:.94}
+.jm-focus-body{
+  position:absolute;inset:auto 0 0 0;padding:26px;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));
+  color:#fff;
+}
+.jm-focus-body .jm-tag{background:rgba(255,255,255,.18);color:#fff}
+.jm-focus-body h3{font-size:21px;line-height:1.35;margin:8px 0 6px;font-weight:800}
+.jm-focus-body p{font-size:13.5px;opacity:.86}
+.jm-focus-meta{margin-top:12px;font-size:12px;display:flex;gap:14px;opacity:.85;flex-wrap:wrap}
+.jm-videolist{display:flex;flex-direction:column;gap:0}
+.jm-video-item{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+  padding:18px 4px;border-bottom:1px dashed var(--jm-line);
+  align-items:flex-start;
+}
+.jm-video-item:last-child{border-bottom:none}
+.jm-video-index{
+  font-size:22px;font-weight:900;color:var(--jm-line);
+  line-height:1;width:34px;flex:none;letter-spacing:-.03em;
+  transition:.2s;
+}
+.jm-video-item:hover .jm-video-index{color:var(--jm-red)}
+.jm-video-item h3{font-size:16.5px;font-weight:700;line-height:1.45;margin-bottom:5px}
+.jm-video-item p{font-size:13.5px;color:var(--jm-gray);margin-bottom:8px}
+.jm-video-meta{font-size:12px;color:var(--jm-gray);display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.jm-video-meta b{color:var(--jm-ink-soft);font-weight:700}
+.jm-video-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.jm-mini-btn{
+  font-size:12px;font-weight:700;border:1px solid var(--jm-line);border-radius:999px;
+  padding:4px 12px;color:var(--jm-ink-soft);transition:.18s;background:#fff;
+}
+.jm-mini-btn:hover{border-color:var(--jm-red);color:var(--jm-red)}
+.jm-mini-btn.active{background:var(--jm-red);border-color:var(--jm-red);color:#fff}
+.jm-mini-btn.jm-fav.active{background:#fff;color:#e0245e;border-color:#e0245e}
+
+/* ---------- 品牌深度解析 长文 ---------- */
+.jm-deep{background:var(--jm-bg);border-top:1px solid var(--jm-line);border-bottom:1px solid var(--jm-line)}
+.jm-deep-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:44px}
+.jm-prose p{margin-bottom:16px;color:#3a3a43;font-size:15.5px}
+.jm-prose h3{
+  font-size:20px;font-weight:800;margin:30px 0 12px;line-height:1.4;
+  padding-left:14px;border-left:4px solid var(--jm-red);
+}
+.jm-prose h3:first-child{margin-top:0}
+.jm-pull{
+  border-left:4px solid var(--jm-red);background:#fff;border-radius:0 10px 10px 0;
+  padding:16px 20px;font-size:15px;color:var(--jm-ink-soft);font-weight:600;
+  margin:20px 0;border:1px solid var(--jm-line);border-left:4px solid var(--jm-red);
+}
+.jm-side-card{
+  background:#fff;border:1px solid var(--jm-line);border-radius:var(--jm-radius);
+  padding:22px;position:sticky;top:calc(var(--jm-sticky-h) + 20px);
+}
+.jm-side-card h3{font-size:15px;font-weight:800;margin-bottom:14px;letter-spacing:.02em}
+.jm-side-list li{
+  display:flex;justify-content:space-between;gap:10px;
+  padding:10px 0;border-bottom:1px dashed var(--jm-line);font-size:13.5px;
+}
+.jm-side-list li:last-child{border-bottom:none}
+.jm-side-list b{color:var(--jm-red);font-weight:800;flex:none}
+
+/* ---------- 专题 ---------- */
+.jm-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.jm-topic-card{padding:24px;display:flex;flex-direction:column;gap:12px}
+.jm-topic-num{
+  font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--jm-red);
+}
+.jm-topic-card h3{font-size:18px;font-weight:800;line-height:1.35}
+.jm-topic-card p{font-size:13.5px;color:var(--jm-gray)}
+.jm-topic-status{
+  align-self:flex-start;font-size:11.5px;font-weight:700;
+  border-radius:999px;padding:3px 11px;border:1px solid var(--jm-line);color:var(--jm-gray);
+}
+.jm-topic-status.on{color:var(--jm-red);border-color:rgba(193,39,45,.4);background:rgba(193,39,45,.06)}
+.jm-topic-items{border-top:1px solid var(--jm-line);padding-top:10px;display:flex;flex-direction:column;gap:8px}
+.jm-topic-items li{font-size:13px;display:flex;gap:8px;color:var(--jm-ink-soft)}
+.jm-topic-items li::before{content:"›";color:var(--jm-red);font-weight:900}
+
+/* ---------- 作者（双列简介） ---------- */
+.jm-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.jm-author-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;padding:22px;align-items:flex-start}
+.jm-author-avatar{
+  width:64px;height:64px;border-radius:18px;flex:none;
+  display:grid;place-items:center;font-size:24px;font-weight:900;color:#fff;
+  letter-spacing:-.02em;
+}
+.jm-author-card h3{font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.jm-author-card h3 span{font-size:11px;font-weight:700;background:var(--jm-bg);border:1px solid var(--jm-line);padding:1px 8px;border-radius:999px;color:var(--jm-gray)}
+.jm-author-field{font-size:12.5px;color:var(--jm-red);font-weight:700;margin:3px 0 8px}
+.jm-author-bio{font-size:13.5px;color:var(--jm-gray);margin-bottom:10px}
+.jm-author-nums{font-size:12px;color:var(--jm-gray);display:flex;gap:14px;margin-bottom:10px}
+.jm-author-nums b{color:var(--jm-ink);font-weight:800}
+
+/* ---------- 榜单（数据摘要） ---------- */
+.jm-rank-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px}
+.jm-rank-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.jm-rank-tab{
+  font-size:13px;font-weight:700;padding:7px 16px;border-radius:999px;
+  border:1px solid var(--jm-line);color:var(--jm-gray);background:#fff;transition:.18s;
+}
+.jm-rank-tab.active{background:var(--jm-ink);border-color:var(--jm-ink);color:#fff}
+.jm-rank-list li{
+  display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;
+  align-items:center;padding:13px 4px;border-bottom:1px dashed var(--jm-line);
+}
+.jm-rank-list li:last-child{border-bottom:none}
+.jm-rank-no{font-size:18px;font-weight:900;color:var(--jm-line);letter-spacing:-.02em}
+.jm-rank-list li:nth-child(1) .jm-rank-no{color:var(--jm-red)}
+.jm-rank-list li:nth-child(2) .jm-rank-no{color:#d97706}
+.jm-rank-list li:nth-child(3) .jm-rank-no{color:#2563eb}
+.jm-rank-title{font-size:14.5px;font-weight:700;line-height:1.4}
+.jm-rank-sub{font-size:12px;color:var(--jm-gray)}
+.jm-rank-val{font-size:12.5px;font-weight:800;color:var(--jm-ink-soft);white-space:nowrap}
+.jm-rank-hidden{display:none}
+
+/* ---------- 评论（引用摘录 + 双列） ---------- */
+.jm-quote-block{
+  background:linear-gradient(135deg,var(--jm-ink),var(--jm-ink-soft));
+  color:#fff;border-radius:16px;padding:34px;margin-bottom:28px;position:relative;overflow:hidden;
+}
+.jm-quote-block::after{
+  content:"”";position:absolute;right:18px;top:-24px;font-size:170px;opacity:.09;font-weight:900;line-height:1;
+}
+.jm-quote-block p{font-size:clamp(17px,2.2vw,22px);font-weight:700;line-height:1.6;margin-bottom:14px;max-width:42ch}
+.jm-quote-block span{font-size:13px;opacity:.7}
+.jm-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.jm-comment{
+  background:#fff;border:1px solid var(--jm-line);border-radius:12px;padding:18px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.jm-comment-head{display:flex;align-items:center;gap:10px}
+.jm-comment-avatar{
+  width:34px;height:34px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:13px;font-weight:800;color:#fff;
+}
+.jm-comment-name{font-size:13.5px;font-weight:800}
+.jm-comment-time{font-size:11.5px;color:var(--jm-gray)}
+.jm-comment-body{font-size:13.5px;color:#3a3a43}
+.jm-comment-foot{display:flex;gap:14px;font-size:12px;color:var(--jm-gray)}
+.jm-comment-foot button:hover{color:var(--jm-red)}
+
+/* ---------- 企业动态 / FAQ ---------- */
+.jm-two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px}
+.jm-news li{
+  display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;
+  padding:16px 0;border-bottom:1px dashed var(--jm-line);align-items:baseline;
+}
+.jm-news time{font-size:12.5px;color:var(--jm-gray);font-weight:700}
+.jm-news b{font-size:14.5px;font-weight:700;display:block}
+.jm-news span{font-size:12.5px;color:var(--jm-gray)}
+.jm-faq details{
+  background:#fff;border:1px solid var(--jm-line);border-radius:12px;
+  margin-bottom:10px;overflow:hidden;
+}
+.jm-faq summary{
+  list-style:none;cursor:pointer;padding:15px 18px;font-size:14.5px;font-weight:700;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.jm-faq summary::-webkit-details-marker{display:none}
+.jm-faq summary::after{content:"+";font-size:20px;color:var(--jm-red);font-weight:400;transition:.2s}
+.jm-faq details[open] summary::after{transform:rotate(45deg)}
+.jm-faq details[open] summary{color:var(--jm-red)}
+.jm-faq p{padding:0 18px 16px;font-size:13.5px;color:var(--jm-gray)}
+
+/* ---------- 合作墙 ---------- */
+.jm-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.jm-partner{
+  border:1px solid var(--jm-line);border-radius:12px;background:#fff;
+  padding:20px 14px;text-align:center;transition:.2s;
+}
+.jm-partner:hover{border-color:var(--jm-red);transform:translateY(-2px)}
+.jm-partner b{display:block;font-size:14px;font-weight:800;margin-bottom:2px}
+.jm-partner span{font-size:11.5px;color:var(--jm-gray)}
+
+/* ---------- 页脚 ---------- */
+.jm-footer{background:var(--jm-ink);color:#c9c9d2;padding:54px 0 26px;margin-top:0}
+.jm-footer-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:36px;margin-bottom:38px}
+.jm-footer h4{color:#fff;font-size:14px;font-weight:800;margin-bottom:14px;letter-spacing:.04em}
+.jm-footer li{margin-bottom:9px;font-size:13.5px}
+.jm-footer a:hover{color:#fff}
+.jm-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.jm-footer-brand .jm-brand-mark{background:var(--jm-red)}
+.jm-footer-brand b{color:#fff;font-size:17px;font-weight:800}
+.jm-footer p{font-size:13px;line-height:1.8;max-width:34ch}
+.jm-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:22px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12.5px;color:#8f8f9c;
+}
+
+/* ---------- 回到顶部 / Toast / 弹窗 ---------- */
+.jm-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
+  background:var(--jm-ink);color:#fff;display:grid;place-items:center;
+  box-shadow:var(--jm-shadow-lg);z-index:800;font-size:18px;
+  opacity:0;pointer-events:none;transition:.25s;
+}
+.jm-top.show{opacity:1;pointer-events:auto}
+.jm-top:hover{background:var(--jm-red)}
+.jm-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+  background:var(--jm-ink);color:#fff;font-size:13.5px;font-weight:600;
+  padding:11px 22px;border-radius:999px;z-index:1200;
+  opacity:0;pointer-events:none;transition:.28s;box-shadow:var(--jm-shadow-lg);
+  max-width:90vw;text-align:center;
+}
+.jm-toast.show{opacity:1;transform:translate(-50%,0)}
+.jm-modal-mask{
+  position:fixed;inset:0;background:rgba(17,17,20,.55);z-index:1100;
+  display:none;align-items:center;justify-content:center;padding:22px;
+  backdrop-filter:blur(4px);
+}
+.jm-modal-mask.open{display:flex}
+.jm-modal{
+  background:#fff;border-radius:18px;max-width:460px;width:100%;
+  padding:28px;box-shadow:var(--jm-shadow-lg);position:relative;
+  animation:jmPop .24s ease-out;max-height:86vh;overflow:auto;
+}
+@keyframes jmPop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.jm-modal h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.jm-modal p{font-size:14px;color:var(--jm-gray);margin-bottom:18px}
+.jm-modal-close{position:absolute;right:16px;top:14px;font-size:20px;color:var(--jm-gray);width:32px;height:32px;border-radius:50%}
+.jm-modal-close:hover{background:var(--jm-bg);color:var(--jm-ink)}
+.jm-field{margin-bottom:14px}
+.jm-field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:6px;color:var(--jm-ink-soft)}
+.jm-field input,.jm-field textarea,.jm-field select{
+  width:100%;border:1px solid var(--jm-line);border-radius:10px;
+  padding:10px 12px;font-size:14px;font-family:inherit;outline:none;background:#fff;
+}
+.jm-field input:focus,.jm-field textarea:focus{border-color:var(--jm-red)}
+.jm-field textarea{resize:vertical;min-height:90px}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .jm-nav{display:none}
+  .jm-burger{display:grid}
+  .jm-hero-grid{grid-template-columns:1fr;gap:34px;padding:40px 0 48px}
+  .jm-hero-visual img{aspect-ratio:16/10}
+  .jm-focus-wrap{grid-template-columns:1fr}
+  .jm-deep-grid{grid-template-columns:1fr;gap:30px}
+  .jm-side-card{position:static}
+  .jm-topic-grid{grid-template-columns:1fr}
+  .jm-author-grid{grid-template-columns:1fr}
+  .jm-rank-wrap{grid-template-columns:1fr;gap:26px}
+  .jm-two-col{grid-template-columns:1fr;gap:30px}
+  .jm-footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .jm-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  :root{--jm-sticky-h:96px}
+  .jm-section{padding:46px 0}
+  .jm-announce-inner{height:34px;padding:0 16px;gap:8px}
+  .jm-announce-list li{height:34px;font-size:12px}
+  .jm-announce-more{display:none}
+  .jm-announce-track{height:34px}
+  @keyframes jmRoll{
+    0%,22%{transform:translateY(0)}
+    25%,47%{transform:translateY(-34px)}
+    50%,72%{transform:translateY(-68px)}
+    75%,97%{transform:translateY(-102px)}
+    100%{transform:translateY(0)}
+  }
+  .jm-header-inner{height:60px;gap:12px;padding:0 16px}
+  .jm-search{display:none}
+  .jm-hero-stats{grid-template-columns:1fr 1fr 1fr;gap:6px}
+  .jm-comment-grid{grid-template-columns:1fr}
+  .jm-footer-grid{grid-template-columns:1fr}
+  .jm-quote-block{padding:24px}
+  .jm-video-index{width:26px;font-size:18px}
+  .jm-author-card{grid-template-columns:1fr}
+  .jm-news li{grid-template-columns:1fr}
+  .jm-footer-bottom{flex-direction:column}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== S1 公告条 + 页头（吸顶） ===== -->
+<div class="jm-sticky-wrap">
+  <div class="jm-announce">
+    <div class="jm-announce-inner">
+      <span class="jm-announce-tag">官方发布</span>
+      <div class="jm-announce-track">
+        <ul class="jm-announce-list">
+          <li>鸠摩智性吧「理性七人谈」第二季 EP06 已上线<span>专题·11月21日</span></li>
+          <li>2026「思辨创作挑战」报名通道开启，投稿截止 12 月 20 日<span>比赛·报名</span></li>
+          <li>官方网站创作者认证计划新增 137 位签约作者<span>创作者</span></li>
+          <li>新版本「关键词解析」知识库上线，支持下载 PDF 长文<span>更新日志</span></li>
+        </ul>
+      </div>
+      <a class="jm-announce-more" href="#jm-news">全部动态</a>
+    </div>
+  </div>
+  <header class="jm-header">
+    <div class="jm-header-inner">
+      <a class="jm-brand" href="#jm-top">
+        <span class="jm-brand-mark">鸠</span>
+        <span class="jm-brand-name">鸠摩智性吧<small>JIUMO THINK BAR</small></span>
+      </a>
+      <nav class="jm-nav" aria-label="主导航">
+        <a href="#jm-focus">焦点内容</a>
+        <a href="#jm-deep">深度解析</a>
+        <a href="#jm-topics">专题企划</a>
+        <a href="#jm-authors">创作者</a>
+        <a href="#jm-rank">口碑榜</a>
+        <a href="#jm-comments">用户评价</a>
+        <a href="#jm-news">企业动态</a>
+      </nav>
+      <div class="jm-header-side">
+        <form class="jm-search" id="jmSearchForm" role="search">
+          <input type="search" id="jmSearchInput" placeholder="搜索内容 / 创作者" aria-label="站内搜索">
+          <button type="submit" aria-label="搜索">⌕</button>
+        </form>
+        <button class="jm-btn jm-btn-primary" data-modal="jmModalSubmit" type="button">投稿入口</button>
+        <button class="jm-burger" id="jmBurger" aria-label="展开导航" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <div class="jm-mobile-nav" id="jmMobileNav">
+      <div class="jm-mobile-search">
+        <input type="search" id="jmMobileSearch" placeholder="搜索关键词，如：理性 / 访谈" aria-label="移动端搜索" style="flex:1;border:1px solid var(--jm-line);border-radius:10px;padding:9px 12px;font-size:14px;outline:none;font-family:inherit">
+        <button class="jm-btn jm-btn-primary" type="button" id="jmMobileSearchBtn">搜索</button>
+      </div>
+      <a href="#jm-focus">焦点内容</a>
+      <a href="#jm-deep">深度解析</a>
+      <a href="#jm-topics">专题企划</a>
+      <a href="#jm-authors">创作者</a>
+      <a href="#jm-rank">口碑榜</a>
+      <a href="#jm-comments">用户评价</a>
+      <a href="#jm-news">企业动态</a>
+    </div>
+    <div class="jm-search-tip" id="jmSearchTip" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="jm-top">
+
+<!-- ===== S2 品牌首屏（4:6 左文右图） ===== -->
+<section class="jm-hero" aria-labelledby="jmHeroTitle">
+  <div class="jm-container">
+    <div class="jm-hero-grid">
+      <div>
+        <span class="jm-hero-badge"><i></i>官方网站 · 持续运营第 9 年</span>
+        <h1 class="jm-h1" id="jmHeroTitle">鸠摩智性吧</h1>
+        <p class="jm-hero-sub">理性表达 · 多元视角 · 深度内容的视频社区</p>
+        <p class="jm-hero-intro">
+          作为深耕理性讨论与知识分享领域的品牌，鸠摩智性吧官方网站以原创高清视频为核心，连接创作者、企业与用户，构建值得信赖的内容生态。
+        </p>
+        <div class="jm-hero-stats">
+          <div class="jm-stat"><b>4,860万</b><span>累计播放</span></div>
+          <div class="jm-stat"><b>1,270位</b><span>签约创作者</span></div>
+          <div class="jm-stat"><b>96.3%</b><span>用户口碑好评</span></div>
+        </div>
+        <div class="jm-hero-actions">
+          <a href="#jm-focus" class="jm-btn jm-btn-primary">进入内容首页</a>
+          <a href="#jm-authors" class="jm-btn jm-btn-ghost">认识创作者</a>
+          <button class="jm-btn jm-btn-ghost" data-modal="jmModalSubmit" type="button">我要投稿</button>
+        </div>
+      </div>
+      <div class="jm-hero-visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23111114'/%3E%3Cstop offset='1' stop-color='%233b1416'/%3E%3C/linearGradient%3E%3CradialGradient id='glow' cx='.72' cy='.2' r='.7'%3E%3Cstop offset='0' stop-color='%23c1272d' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%23c1272d' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23bg)'/%3E%3Crect width='800' height='550' fill='url(%23glow)'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.14'%3E%3Cpath d='M0 380h800M0 300h800M0 460h800'/%3E%3Cpath d='M160 0v550M400 0v550M640 0v550'/%3E%3C/g%3E%3Ccircle cx='560' cy='215' r='104' fill='none' stroke='%23c1272d' stroke-width='2' stroke-opacity='.7'/%3E%3Ccircle cx='560' cy='215' r='66' fill='%23c1272d' fill-opacity='.22'/%3E%3Ccircle cx='560' cy='215' r='66' fill='none' stroke='%23ffffff' stroke-opacity='.3'/%3E%3Cpath d='M536 190v50l42-25z' fill='%23ffffff' fill-opacity='.92'/%3E%3Cg fill='%23ffffff'%3E%3Crect x='70' y='96' width='150' height='12' rx='6' fill-opacity='.9'/%3E%3Crect x='70' y='124' width='96' height='10' rx='5' fill-opacity='.45'/%3E%3Crect x='70' y='152' width='168' height='8' rx='4' fill-opacity='.25'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.55'%3E%3Crect x='70' y='430' width='66' height='34' rx='6'/%3E%3Crect x='150' y='430' width='66' height='34' rx='6'/%3E%3Crect x='230' y='430' width='66' height='34' rx='6'/%3E%3C/g%3E%3Ctext x='72' y='452' font-family='sans-serif' font-size='13' fill='%23111114' font-weight='700'%3E理性%3C/text%3E%3Ctext x='152' y='452' font-family='sans-serif' font-size='13' fill='%23111114' font-weight='700'%3E深度%3C/text%3E%3Ctext x='232' y='452' font-family='sans-serif' font-size='13' fill='%23111114' font-weight='700'%3E陪伴%3C/text%3E%3C/svg%3E"
+             alt="鸠摩智性吧官方网站首屏主视觉：深色空间中的播放标识与理性内容标签" width="800" height="550" loading="eager">
+        <div class="jm-hero-float">
+          <div class="jm-avatar">林</div>
+          <div>
+            <b><span class="jm-live-dot"></span>林砚舟 · 直播中</b>
+            <span>理性七人谈 EP06 · 论表达的边界</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S3 焦点内容 + 视频流（一幅重点大图 + 文字列表） ===== -->
+<section class="jm-section" id="jm-focus" aria-labelledby="jmFocusTitle">
+  <div class="jm-container">
+    <div class="jm-sec-head">
+      <span class="jm-eyebrow">Focus 焦点内容</span>
+      <h2 class="jm-h2" id="jmFocusTitle">本周焦点 · 鸠摩智性吧精选视频</h2>
+      <p class="jm-lead">由编辑部与官方联合推荐的正版高清内容，涵盖深度访谈、经验分享与创作幕后，每一部都承载真实的力量。</p>
+    </div>
+    <div class="jm-focus-wrap">
+      <article class="jm-focus-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231b1b21'/%3E%3Cstop offset='1' stop-color='%23442a2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='480' fill='url(%23f1)'/%3E%3Cg stroke='%23c1272d' stroke-width='1.4' fill='none' opacity='.55'%3E%3Cpath d='M80 360l90-110 90 110 90-150 120 150'/%3E%3Ccircle cx='170' cy='250' r='9' fill='%23c1272d' stroke='none'/%3E%3Ccircle cx='260' cy='360' r='9' fill='%23c1272d' stroke='none'/%3E%3Ccircle cx='350' cy='210' r='9' fill='%23c1272d' stroke='none'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.9'%3E%3Crect x='80' y='86' width='120' height='10' rx='5'/%3E%3Crect x='80' y='110' width='210' height='8' rx='4' fill-opacity='.35'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='320' cy='240' r='46' fill-opacity='.12'/%3E%3Cpath d='M306 216v48l40-24z' fill-opacity='.95'/%3E%3C/g%3E%3Crect x='0' y='388' width='640' height='92' fill='%23000000' fill-opacity='.42'/%3E%3Ctext x='40' y='432' font-family='sans-serif' font-size='21' fill='%23ffffff' font-weight='700'%3E表达的边界：七位创作者的深夜对谈%3C/text%3E%3Ctext x='40' y='458' font-family='sans-serif' font-size='13' fill='%23ffffff' fill-opacity='.7'%3E深度访谈 · 46分12秒 · 官方发布%3C/text%3E%3C/svg%3E"
+             alt="深夜对谈专题视频封面：七位创作者围坐讨论表达边界" width="640" height="480" loading="lazy">
+        <div class="jm-focus-body">
+          <span class="jm-tag">深度访谈</span><span class="jm-tag">官方发布</span>
+          <h3>表达的边界：七位创作者的深夜对谈</h3>
+          <p>关于理性讨论如何保持温度，七位签约创作者给出了不同的答案。</p>
+          <div class="jm-focus-meta">
+            <span>▶ 128.4万播放</span><span>♥ 9.6万点赞</span><span>作者：林砚舟</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="jm-videolist">
+        <article class="jm-video-item">
+          <span class="jm-video-index">01</span>
+          <div>
+            <h3>一条视频讲清「性」字辈命名的来由与误解</h3>
+            <p>从词源、语境到当代用法，用 12 分钟把容易被误读的命名讲透，附完整考据清单。</p>
+            <div class="jm-video-meta">
+              <span class="jm-tag">知识科普</span>
+              <span>作者 <b>顾青梧</b></span><span>▶ 84.2万</span><span>♥ 6.1万</span><span>★ 3.2万</span>
+            </div>
+            <div class="jm-video-actions">
+              <button class="jm-mini-btn" data-like type="button">♥ 点赞</button>
+              <button class="jm-mini-btn jm-fav" data-fav type="button">★ 收藏</button>
+              <button class="jm-mini-btn" data-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="jm-video-item">
+          <span class="jm-video-index">02</span>
+          <div>
+            <h3>如何把一场 3 小时的争论剪成 8 分钟的高信息密度短片</h3>
+            <p>创作幕后拆解：素材分级、观点对照表、字幕节奏与情绪留白，含工程文件思路。</p>
+            <div class="jm-video-meta">
+              <span class="jm-tag">创作幕后</span>
+              <span>作者 <b>沈知微</b></span><span>▶ 61.8万</span><span>♥ 4.4万</span><span>★ 2.7万</span>
+            </div>
+            <div class="jm-video-actions">
+              <button class="jm-mini-btn" data-like type="button">♥ 点赞</button>
+              <button class="jm-mini-btn jm-fav" data-fav type="button">★ 收藏</button>
+              <button class="jm-mini-btn" data-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="jm-video-item">
+          <span class="jm-video-index">03</span>
+          <div>
+            <h3>在旧书市淘到的三本笔记，改变了我的选题方法</h3>
+            <p>城市探索与日常记录结合，跟着镜头走进城中村的旧书市场，寻找选题的可信来源。</p>
+            <div class="jm-video-meta">
+              <span class="jm-tag">城市探索</span>
+              <span>作者 <b>许南枝</b></span><span>▶ 47.5万</span><span>♥ 3.8万</span><span>★ 1.9万</span>
+            </div>
+            <div class="jm-video-actions">
+              <button class="jm-mini-btn" data-like type="button">♥ 点赞</button>
+              <button class="jm-mini-btn jm-fav" data-fav type="button">★ 收藏</button>
+              <button class="jm-mini-btn" data-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="jm-video-item">
+          <span class="jm-video-index">04</span>
+          <div>
+            <h3>镜头前的第三种声音：素人出镜的心理准备清单</h3>
+            <p>访谈摘录式教程，来自 30 位首次出镜者的真实反馈，整理成可直接照做的准备步骤。</p>
+            <div class="jm-video-meta">
+              <span class="jm-tag">实用技巧</span>
+              <span>作者 <b>陆小满</b></span><span>▶ 39.6万</span><span>♥ 3.1万</span><span>★ 2.4万</span>
+            </div>
+            <div class="jm-video-actions">
+              <button class="jm-mini-btn" data-like type="button">♥ 点赞</button>
+              <button class="jm-mini-btn jm-fav" data-fav type="button">★ 收藏</button>
+              <button class="jm-mini-btn" data-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="jm-video-item">
+          <span class="jm-video-index">05</span>
+          <div>
+            <h3>「鸠摩智性吧」一镜到底的片头，是怎么设计出来的</h3>
+            <p>品牌故事与设计复盘：从字体选择到声音设计，四版废稿与最终成片的差别在哪。</p>
+            <div class="jm-video-meta">
+              <span class="jm-tag">品牌故事</span>
+              <span>作者 <b>周敦野</b></span><span>▶ 72.3万</span><span>♥ 5.7万</span><span>★ 3.6万</span>
+            </div>
+            <div class="jm-video-actions">
+              <button class="jm-mini-btn" data-like type="button">♥ 点赞</button>
+              <button class="jm-mini-btn jm-fav" data-fav type="button">★ 收藏</button>
+              <button class="jm-mini-btn" data-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="jm-video-item">
+          <span class="jm-video-index">06</span>
+          <div>
+            <h3>给新人的 30 天选题训练：从空镜到成片</h3>
+            <p>一份可下载的练习清单，搭配 6 个实战案例，帮助初级创作者建立稳定的表达节奏。</p>
+            <div class="jm-video-meta">
+              <span class="jm-tag">教程干货</span>
+              <span>作者 <b>林砚舟</b></span><span>▶ 55.1万</span><span>♥ 4.3万</span><span>★ 2.8万</span>
+            </div>
+            <div class="jm-video-actions">
+              <button class="jm-mini-btn" data-like type="button">♥ 点赞</button>
+              <button class="jm-mini-btn jm-fav" data-fav type="button">★ 收藏</button>
+              <button class="jm-mini-btn" data-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S4 关键词深度解析（800字以上，含 4 个 H3） ===== -->
+<section class="jm-section jm-deep" id="jm-deep" aria-labelledby="jmDeepTitle">
+  <div class="jm-container">
+    <div class="jm-sec-head">
+      <span class="jm-eyebrow">Insight 深度解析</span>
+      <h2 class="jm-h2" id="jmDeepTitle">关键词解析：为什么鸠摩智性吧值得被认真做成一门内容生意</h2>
+      <p class="jm-lead">我们用一个品牌去承载一组并不轻松的话题：命名、理性、深度与持续的陪伴。这不是口号，而是每天在选题会上被反复推敲的操作标准。</p>
+    </div>
+    <div class="jm-deep-grid">
+      <div class="jm-prose">
+        <h3>一、「鸠摩」二字的来历与品牌内核</h3>
+        <p>「鸠摩」取自一位古代译经者的名字，他一生做的事是把陌生语言翻译成可被理解的中文。鸠摩智性吧借这两个字，想表达的并不是某种神秘符号，而是一种翻译者的姿态：把晦涩的观点翻译成普通观众可以进入的影像表达。我们在 2017 年建立这个品牌时，第一条自制视频只有 3 分 48 秒，讲的是一段关于「讨论为什么会变成争吵」的访谈摘录。视频上线第二天，评论区有人写下「第一次有人告诉我，表达可以慢一点」。这条评论至今贴在编辑部白板上，成为鸠摩智性吧内容伦理的起点。</p>
+        <p>九年过去，官方网站累计发布了 2,140 部原创正版视频，从单机采访到多机位对谈，从 5 分钟短视频到 46 分钟的长篇深度内容，团队始终保留一个硬性标准：每一部成片必须回答一个可以被复述的问题。这是品牌的内核，也是我们把「智性」落到操作层面的方式——不追求炫技的镜头，而是追求可被复述的结构。</p>
+        <h3>二、「性」字的分寸：一场关于命名的长期沟通</h3>
+        <p>很多人第一次听到鸠摩智性吧，会先对第三个字产生想象。我们并不回避这一点，反而在品牌页最显眼的位置解释清楚了它的两组含义：一是「智性」，指理性思辨与求知的状态；二是「性质」，指内容本身真实、可验证的质地。在鸠摩智性吧官方网站的内容分类里，性不是一个猎奇标签，而是关于关系、边界、尊重与自我认知的公共讨论。我们做过 6 期与心理学研究者、教育工作者共同策划的对话，其中播放量最高的一期是《如何和青春期的孩子谈身体与边界》，累计播放 214 万，收到 3,100 多条家长留言。</p>
+        <p>为了让讨论保持在健康的尺度内，企业层面建立了三级内容审核标准：选题委员会初审、领域顾问复审、发布后 48 小时舆情巡检。所有涉及身体、关系与健康的视频都会附上信息出处与专家署名。我们相信，值得信赖的品牌不是靠声明建立的，而是靠每一次具体的发布积累的。这也是我们在元描述与合作邮件里反复强调「品质」的原因——它是一个操作词，不是一个形容词。</p>
+        <h3>三、「吧」的社区形态：从观看者到共创者</h3>
+        <p>最后一个字「吧」，决定了鸠摩智性吧不是一家单向输出的影视公司，而是一个持续运营的视频社区。官方网站设有投稿入口、创作者认证、专题共创与读者评论四个通道。过去一年，有 6,800 位用户通过投稿入口提交了选题，其中 412 个选题进入拍摄流程，最终上线 86 部由用户共创的内容。社区的口碑不是靠流量换来的：我们的用户留存率是 61%，会员复投率超过 47%，这些数字背后是大量具体的互动——有人在评论区补上了我们遗漏的文献，有人指出了一处数据错误并在下一期被更正致谢。</p>
+        <p>我们把这个过程称为「共同编辑」。在鸠摩智性吧，编者与观众之间没有完全的高墙。每期专题下方都会留出一个「异议区」，专门收不同意本期结论的留言，择优在下一期回应。这种设计让平台的讨论具备成长性，也让品牌具备了真实感。我们并不宣称自己永远正确，我们只承诺每一次表达都经过审查、都有回应、都可以被质疑。</p>
+        <h3>四、内容生态与商业逻辑：理性也可以是可持续的</h3>
+        <p>在商业层面，鸠摩智性吧的模式由三部分构成：会员订阅、企业定制内容与版权分销。会员订阅占收入的 54%，这让我们可以承受较长周期的深度选题，而不用被短期流量裹挟。企业定制内容则面向教育与公益机构，例如为一家阅读推广机构制作的 8 集短片《一本书的旅程》，记录了从印刷厂到乡村图书角的全过程，上线后带动该机构的捐赠咨询量增长 38%。版权分销让这些内容进入校园与图书馆放映场景，一年内完成了 126 场线下放映。</p>
+        <p>我们把这套模式视为一种垂直领域的深耕：不做最大，只做最扎实。鸠摩智性吧的团队目前由 26 位全职成员与 1,270 位签约创作者组成，其中 78% 的创作者拥有跨学科背景，包括社会学、法学、医学与设计。不同背景带来了多元的表达方式：有人用镜头记录田野，有人用手绘拆解概念，有人只做一镜到底的口述。正是这种多元，让鸠摩智性吧在行业里建立了辨识度，也让「理性」这个常被误读为冷冰冰的词，带上了温度。</p>
+        <div class="jm-pull">我们相信：一个好的内容社区，不是让人更会说话，而是让人更会听。鸠摩智性吧会继续把这件事做下去。</div>
+        <p>面向未来三年，鸠摩智性吧官方网站将开放「专题共创计划」，每年支持 30 个由用户发起的长线选题，并提供制作经费、拍摄场地与专业指导。我们也会持续完善创作者成长体系，把教程干货、经验分享与行业观察沉淀成可检索的知识库。一个品牌的真正价值，不在于它发布过多少视频，而在于这些视频是否真的陪人走过一段思考的路。这是鸠摩智性吧的长期功课，也是我们对每一位用户最具体的承诺。</p>
+      </div>
+      <aside class="jm-side-card" aria-label="品牌数据摘要">
+        <h3>品牌数据摘要</h3>
+        <ul class="jm-side-list">
+          <li><span>原创正版视频</span><b>2,140 部</b></li>
+          <li><span>签约创作者</span><b>1,270 位</b></li>
+          <li><span>累计播放</span><b>4,860 万</b></li>
+          <li><span>用户留存率</span><b>61%</b></li>
+          <li><span>会员复投率</span><b>47.3%</b></li>
+          <li><span>线下放映场次</span><b>126 场</b></li>
+          <li><span>内容审核通过率</span><b>92.6%</b></li>
+        </ul>
+        <p style="font-size:12.5px;color:var(--jm-gray);margin-top:14px">数据统计截至 2026 年 11 月，来源：鸠摩智性吧官方内容中心。</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S5 专题企划 ===== -->
+<section class="jm-section" id="jm-topics" aria-labelledby="jmTopicsTitle">
+  <div class="jm-container">
+    <div class="jm-sec-head">
+      <span class="jm-eyebrow">Series 专题企划</span>
+      <h2 class="jm-h2" id="jmTopicsTitle">正在进行的三组专题 · 鸠摩智性吧原创企划</h2>
+      <p class="jm-lead">专题是鸠摩智性吧最具辨识度的内容形态：一个主题，多重视角，连续更新，最终沉淀为一份可以被收藏的资料。</p>
+    </div>
+    <div class="jm-topic-grid">
+      <article class="jm-card jm-topic-card">
+        <span class="jm-topic-num">SERIES 01</span>
+        <h3>理性七人谈</h3>
+        <p>每期邀请七位不同领域的创作者，围绕一个公共话题展开不设主持人打断的长谈。</p>
+        <span class="jm-topic-status on">更新中 · 已播 6 集</span>
+        <ul class="jm-topic-items">
+          <li>EP04：我们为什么害怕在公开场合改变观点</li>
+          <li>EP05：算法推荐时代，如何保留自己的判断</li>
+          <li>EP06：论表达的边界（本周新上线）</li>
+        </ul>
+      </article>
+      <article class="jm-card jm-topic-card">
+        <span class="jm-topic-num">SERIES 02</span>
+        <h3>一间房的纪录片</h3>
+        <p>走进普通人生活里的一个房间，用 20 分钟记录空间如何塑造人的习惯与关系。</p>
+        <span class="jm-topic-status on">更新中 · 已播 11 集</span>
+        <ul class="jm-topic-items">
+          <li>第 09 集：六平方米的夜班书房</li>
+          <li>第 10 集：合租房的公共厨房</li>
+          <li>第 11 集：县城书店的二楼角落</li>
+        </ul>
+      </article>
+      <article class="jm-card jm-topic-card">
+        <span class="jm-topic-num">SERIES 03</span>
+        <h3>创作者的第一次</h3>
+        <p>记录创作者第一次面对镜头、第一次被质疑、第一次公开更正错误的真实过程。</p>
+        <span class="jm-topic-status">筹备中 · 12 月上线</span>
+        <ul class="jm-topic-items">
+          <li>先导片：第一次剪到凌晨四点</li>
+          <li>访谈素材：被误解之后的一封信</li>
+          <li>共创招募：说出你的第一次</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S5 创作者/作者矩阵（双列简介） ===== -->
+<section class="jm-section" id="jm-authors" style="background:var(--jm-bg);border-top:1px solid var(--jm-line);border-bottom:1px solid var(--jm-line)" aria-labelledby="jmAuthorsTitle">
+  <div class="jm-container">
+    <div class="jm-sec-head">
+      <span class="jm-eyebrow">Creators 创作者</span>
+      <h2 class="jm-h2" id="jmAuthorsTitle">鸠摩智性吧的创作者们</h2>
+      <p class="jm-lead">他们来自不同学科与生活现场，用影像把复杂问题讲得清楚。每位创作者都经过官方认证与持续培训。</p>
+    </div>
+    <div class="jm-author-grid">
+      <article class="jm-card jm-author-card">
+        <div class="jm-author-avatar" style="background:linear-gradient(135deg,#c1272d,#f0787d)">林</div>
+        <div>
+          <h3>林砚舟 <span>官方认证</span></h3>
+          <div class="jm-author-field">深度访谈 · 公共表达</div>
+          <p class="jm-author-bio">前新闻记者，做访谈第 11 年。擅长把长对谈剪出呼吸感，主张「提问比回答更重要」。在鸠摩智性吧主理《理性七人谈》，累计采访 180 余位学者与创作者。</p>
+          <div class="jm-author-nums"><span>作品 <b>214</b></span><span>粉丝 <b>96.4万</b></span></div>
+          <button class="jm-mini-btn" data-author="林砚舟" type="button">查看作者档案</button>
+        </div>
+      </article>
+      <article class="jm-card jm-author-card">
+        <div class="jm-author-avatar" style="background:linear-gradient(135deg,#1f2937,#4b5563)">顾</div>
+        <div>
+          <h3>顾青梧 <span>知识科普</span></h3>
+          <div class="jm-author-field">词源考据 · 概念拆解</div>
+          <p class="jm-author-bio">中文系出身，做过 6 年图书编辑。喜欢从词语的来历讲起，把容易误解的概念做成可查证的短片。她的系列《一个词的旅行》被 30 余所中学用作课堂补充材料。</p>
+          <div class="jm-author-nums"><span>作品 <b>168</b></span><span>粉丝 <b>72.8万</b></span></div>
+          <button class="jm-mini-btn" data-author="顾青梧" type="button">查看作者档案</button>
+        </div>
+      </article>
+      <article class="jm-card jm-author-card">
+        <div class="jm-author-avatar" style="background:linear-gradient(135deg,#0f766e,#22c1a4)">沈</div>
+        <div>
+          <h3>沈知微 <span>创作幕后</span></h3>
+          <div class="jm-author-field">剪辑方法 · 内容结构</div>
+          <p class="jm-author-bio">自由剪辑师，服务过纪录片与品牌短片。她坚持把工程文件与思路一起公开，认为方法论不该被藏起来。代表课程《把争论剪成观点》播放量突破 320 万。</p>
+          <div class="jm-author-nums"><span>作品 <b>132</b></span><span>粉丝 <b>58.1万</b></span></div>
+          <button class="jm-mini-btn" data-author="沈知微" type="button">查看作者档案</button>
+        </div>
+      </article>
+      <article class="jm-card jm-author-card">
+        <div class="jm-author-avatar" style="background:linear-gradient(135deg,#b45309,#f59e0b)">许</div>
+        <div>
+          <h3>许南枝 <span>城市探索</span></h3>
+          <div class="jm-author-field">日常记录 · 在地文化</div>
+          <p class="jm-author-bio">城市观察者，习惯带着录音笔逛旧书市与老街区。她的镜头少有解说，更多是环境声与人的碎片对话。系列《街角的第三个人》在社区获得 9.2 分口碑。</p>
+          <div class="jm-author-nums"><span>作品 <b>97</b></span><span>粉丝 <b>41.6万</b></span></div>
+          <button class="jm-mini-btn" data-author="许南枝" type="button">查看作者档案</button>
+        </div>
+      </article>
+      <article class="jm-card jm-author-card">
+        <div class="jm-author-avatar" style="background:linear-gradient(135deg,#4c1d95,#8b5cf6)">陆</div>
+        <div>
+          <h3>陆小满 <span>实用技巧</span></h3>
+          <div class="jm-author-field">镜头表达 · 心理准备</div>
+          <p class="jm-author-bio">心理咨询师转行做内容，专注「人如何面对镜头」。她做的出镜准备清单被多家机构采用，视频节奏温和，讲完一个技巧只需要 6 分钟。</p>
+          <div class="jm-author-nums"><span>作品 <b>88</b></span><span>粉丝 <b>36.3万</b></span></div>
+          <button class="jm-mini-btn" data-author="陆小满" type="button">查看作者档案</button>
+        </div>
+      </article>
+      <article class="jm-card jm-author-card">
+        <div class="jm-author-avatar" style="background:linear-gradient(135deg,#1e3a8a,#3b82f6)">周</div>
+        <div>
+          <h3>周敦野 <span>品牌故事</span></h3>
+          <div class="jm-author-field">视觉设计 · 品牌叙事</div>
+          <p class="jm-author-bio">视觉设计出身，负责鸠摩智性吧多支片头与视觉系统。他相信品牌的记忆点来自细节的一致性，喜欢在视频里讲一版废稿的故事。</p>
+          <div class="jm-author-nums"><span>作品 <b>76</b></span><span>粉丝 <b>29.7万</b></span></div>
+          <button class="jm-mini-btn" data-author="周敦野" type="button">查看作者档案</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S6 数据榜单 + 用户评价（引用摘录 + 双列短评） ===== -->
+<section class="jm-section" id="jm-rank" aria-labelledby="jmRankTitle">
+  <div class="jm-container">
+    <div class="jm-sec-head">
+      <span class="jm-eyebrow">Ranking 数据榜单</span>
+      <h2 class="jm-h2" id="jmRankTitle">本周口碑榜 · 鸠摩智性吧内容热度参考</h2>
+      <p class="jm-lead">榜单依据完播率、收藏率、评论质量与人工复核四项加权生成，每周一更新，不接受付费上榜。</p>
+    </div>
+    <div class="jm-rank-wrap">
+      <div>
+        <div class="jm-rank-tabs" role="tablist" aria-label="榜单切换">
+          <button class="jm-rank-tab active" data-rank="hot" type="button" role="tab" aria-selected="true">热度榜</button>
+          <button class="jm-rank-tab" data-rank="new" type="button" role="tab" aria-selected="false">新人榜</button>
+          <button class="jm-rank-tab" data-rank="word" type="button" role="tab" aria-selected="false">口碑榜</button>
+        </div>
+        <ul class="jm-rank-list jm-rank-hidden" data-rank-list="hot">
+          <li><span class="jm-rank-no">01</span><div><div class="jm-rank-title">表达的边界：七位创作者的深夜对谈</div><div class="jm-rank-sub">林砚舟 · 深度访谈</div></div><span class="jm-rank-val">128.4万</span></li>
+          <li><span class="jm-rank-no">02</span><div><div class="jm-rank-title">一条视频讲清「性」字辈命名的来由与误解</div><div class="jm-rank-sub">顾青梧 · 知识科普</div></div><span class="jm-rank-val">84.2万</span></li>
+          <li><span class="jm-rank-no">03</span><div><div class="jm-rank-title">「鸠摩智性吧」一镜到底的片头是怎么设计出来的</div><div class="jm-rank-sub">周敦野 · 品牌故事</div></div><span class="jm-rank-val">72.3万</span></li>
+          <li><span class="jm-rank-no">04</span><div><div class="jm-rank-title">如何把 3 小时争论剪成 8 分钟短片</div><div class="jm-rank-sub">沈知微 · 创作幕后</div></div><span class="jm-rank-val">61.8万</span></li>
+          <li><span class="jm-rank-no">05</span><div><div class="jm-rank-title">给新人的 30 天选题训练</div><div class="jm-rank-sub">林砚舟 · 教程干货</div></div><span class="jm-rank-val">55.1万</span></li>
+        </ul>
+        <ul class="jm-rank-list jm-rank-hidden" data-rank-list="new">
+          <li><span class="jm-rank-no">01</span><div><div class="jm-rank-title">在县城图书馆待了七天，我拍下了阅读的样子</div><div class="jm-rank-sub">新晋创作者 · 秦拾光</div></div><span class="jm-rank-val">新人 +96</span></li>
+          <li><span class="jm-rank-no">02</span><div><div class="jm-rank-title">夜班公交上的十段对话</div><div class="jm-rank-sub">新晋创作者 · 何寄声</div></div><span class="jm-rank-val">新人 +88</span></li>
+          <li><span class="jm-rank-no">03</span><div><div class="jm-rank-title">一个词的三千年：从竹简到弹幕</div><div class="jm-rank-sub">新晋创作者 · 白露白</div></div><span class="jm-rank-val">新人 +74</span></li>
+          <li><span class="jm-rank-no">04</span><div><div class="jm-rank-title">我如何说服家人不催婚，顺便拍成了短片</div><div class="jm-rank-sub">新晋创作者 · 唐小观</div></div><span class="jm-rank-val">新人 +69</span></li>
+        </ul>
+        <ul class="jm-rank-list jm-rank-hidden" data-rank-list="word">
+          <li><span class="jm-rank-no">01</span><div><div class="jm-rank-title">一间房的纪录片 · 第 09 集</div><div class="jm-rank-sub">口碑评分 9.6 / 10</div></div><span class="jm-rank-val">9.6</span></li>
+          <li><span class="jm-rank-no">02</span><div><div class="jm-rank-title">街角的第三个人 · 合集</div><div class="jm-rank-sub">口碑评分 9.2 / 10</div></div><span class="jm-rank-val">9.2</span></li>
+          <li><span class="jm-rank-no">03</span><div><div class="jm-rank-title">素人出镜的心理准备清单</div><div class="jm-rank-sub">口碑评分 9.1 / 10</div></div><span class="jm-rank-val">9.1</span></li>
+          <li><span class="jm-rank-no">04</span><div><div class="jm-rank-title">如何和青春期的孩子谈身体与边界</div><div class="jm-rank-sub">口碑评分 9.0 / 10</div></div><span class="jm-rank-val">9.0</span></li>
+        </ul>
+      </div>
+      <aside style="background:#fff;border:1px solid var(--jm-line);border-radius:var(--jm-radius);padding:26px">
+        <h3 class="jm-h3">榜单是怎么算出来的</h3>
+        <p style="font-size:13.5px;color:var(--jm-gray);margin-bottom:14px">完播率占 40%，收藏率占 25%，评论质量占 20%，人工复核占 15%。评论质量由三名编辑独立打分，分歧超过 20% 即重置复核。</p>
+        <ul class="jm-side-list">
+          <li><span>本周上榜内容</span><b>28 部</b></li>
+          <li><span>参与复核编辑</span><b>3 人</b></li>
+          <li><span>异常数据剔除</span><b>11 条</b></li>
+          <li><span>榜单更新时间</span><b>周一 10:00</b></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S6 用户评价（引用摘录 + 双列） ===== -->
+<section class="jm-section" id="jm-comments" style="background:var(--jm-bg);border-top:1px solid var(--jm-line);border-bottom:1px solid var(--jm-line)" aria-labelledby="jmCommentsTitle">
+  <div class="jm-container">
+    <div class="jm-sec-head">
+      <span class="jm-eyebrow">Voices 用户评价</span>
+      <h2 class="jm-h2" id="jmCommentsTitle">来自鸠摩智性吧社区的真实声音</h2>
+      <p class="jm-lead">评价来自官网评论区与线下放映反馈，我们保留原话，只做必要的事实核对。</p>
+    </div>
+    <div class="jm-quote-block">
+      <p>「我最喜欢这里的一点是：它允许我说完一句长话。短视频时代，能把 46 分钟留给七个人把一个话题讲清楚，这件事本身就值得被支持。」</p>
+      <span>—— 用户「旧钟摆」，2026 年 10 月 28 日于《理性七人谈》EP05 评论区</span>
+    </div>
+    <div class="jm-comment-grid">
+      <article class="jm-comment">
+        <div class="jm-comment-head">
+          <div class="jm-comment-avatar" style="background:#c1272d">阿</div>
+          <div><div class="jm-comment-name">阿澈</div><div class="jm-comment-time">11 月 20 日 · 收藏了 12 部内容</div></div>
+        </div>
+        <div class="jm-comment-body">看完《如何和青春期的孩子谈身体与边界》，我把链接发给了班主任。她的回应是「原来还能这么讲」。这句话比一万个点赞都重要。</div>
+        <div class="jm-comment-foot"><button type="button" data-like>有用 34</button><button type="button" data-copy>复制</button></div>
+      </article>
+      <article class="jm-comment">
+        <div class="jm-comment-head">
+          <div class="jm-comment-avatar" style="background:#1f2937">李</div>
+          <div><div class="jm-comment-name">李不惑</div><div class="jm-comment-time">11 月 18 日 · 会员第 3 年</div></div>
+        </div>
+        <div class="jm-comment-body">剪辑课程是真干货，工程文件也真给。第一次见一个平台敢把废稿放出来，这反而让我更相信它的成片。</div>
+        <div class="jm-comment-foot"><button type="button" data-like>有用 27</button><button type="button" data-copy>复制</button></div>
+      </article>
+      <article class="jm-comment">
+        <div class="jm-comment-head">
+          <div class="jm-comment-avatar" style="background:#0f766e">小</div>
+          <div><div class="jm-comment-name">小镇图书管理员</div><div class="jm-comment-time">11 月 15 日 · 线下放映参与者</div></div>
+        </div>
+        <div class="jm-comment-body">我们馆申请到了《一本书的旅程》的放映授权，来了 42 位读者，其中 11 位是第一次进图书馆。谢谢你们没有把版权门槛设得太高。</div>
+        <div class="jm-comment-foot"><button type="button" data-like>有用 41</button><button type="button" data-copy>复制</button></div>
+      </article>
+      <article class="jm-comment">
+        <div class="jm-comment-head">
+          <div class="jm-comment-avatar" style="background:#b45309">钟</div>
+          <div><div class="jm-comment-name">钟摆不摆</div><div class="jm-comment-time">11 月 12 日</div></div>
+        </div>
+        <div class="jm-comment-body">说一个缺点：部分专题的更新太慢了。等《创作者的第一次》等了两个月。不过想想做深度内容确实急不来，先给四星，更新了补五星。</div>
+        <div class="jm-comment-foot"><button type="button" data-like>有用 18</button><button type="button" data-copy>复制</button></div>
+      </article>
+      <article class="jm-comment">
+        <div class="jm-comment-head">
+          <div class="jm-comment-avatar" style="background:#4c1d95">尹</div>
+          <div><div class="jm-comment-name">尹雪声</div><div class="jm-comment-time">11 月 9 日 · 创作者认证用户</div></div>
+        </div>
+        <div class="jm-comment-body">作为刚通过认证的新人，最感动的是选题会真的会回我的邮件。我的第三个选题被否了，但编辑附了 600 字的修改建议，比通过更有用。</div>
+        <div class="jm-comment-foot"><button type="button" data-like>有用 52</button><button type="button" data-copy>复制</button></div>
+      </article>
+      <article class="jm-comment">
+        <div class="jm-comment-head">
+          <div class="jm-comment-avatar" style="background:#1e3a8a">老</div>
+          <div><div class="jm-comment-name">老周看片</div><div class="jm-comment-time">11 月 6 日</div></div>
+        </div>
+        <div class="jm-comment-body">清晰度没得说，4K 版本在电视上看很稳。唯一希望增加的是下载后的字幕外挂选项，方便给家里老人看。</div>
+        <div class="jm-comment-foot"><button type="button" data-like>有用 12</button><button type="button" data-copy>复制</button></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S7 辅助区：企业动态 + FAQ + 合作墙 ===== -->
+<section class="jm-section" id="jm-news" aria-labelledby="jmNewsTitle">
+  <div class="jm-container">
+    <div class="jm-two-col">
+      <div>
+        <span class="jm-eyebrow">Updates 企业动态</span>
+        <h2 class="jm-h2" id="jmNewsTitle">鸠摩智性吧最近在做什么</h2>
+        <ul class="jm-news">
+          <li><time>2026.11.21</time><div><b>「理性七人谈」第二季 EP06 正式上线</b><span>官方网站同步推送 4K 版本与完整文字稿，支持下载。</span></div></li>
+          <li><time>2026.11.17</time><div><b>2026 思辨创作挑战开启报名</b><span>面向所有创作者，设 12 个入围名额，投稿截止 12 月 20 日。</span></div></li>
+          <li><time>2026.11.10</time><div><b>创作者认证计划新增 137 位签约作者</b><span>覆盖社会学、法学、医学与设计等 9 个领域。</span></div></li>
+          <li><time>2026.11.03</time><div><b>知识库「关键词解析」上线 PDF 下载</b><span>长文内容支持离线阅读，已开放 46 篇。</span></div></li>
+        </ul>
+      </div>
+      <div class="jm-faq">
+        <span class="jm-eyebrow">FAQ 常见问题</span>
+        <h2 class="jm-h2">关于鸠摩智性吧的六个问题</h2>
+        <details open>
+          <summary>鸠摩智性吧是一个什么平台？</summary>
+          <p>鸠摩智性吧官方网站是一个以理性讨论与知识分享为核心的原创视频社区，提供深度访谈、知识科普、创作教程与专题企划等内容，并开放创作者认证与用户投稿通道。</p>
+        </details>
+        <details>
+          <summary>「性」字在品牌名中是什么意思？</summary>
+          <p>它指「智性」与「性质」两组含义：前者是理性思辨的状态，后者是内容真实、可验证的质地。品牌不涉及任何违规内容，所有涉及关系与健康的选题均经过专家审核。</p>
+        </details>
+        <details>
+          <summary>如何成为签约创作者？</summary>
+          <p>通过官网投稿入口提交 2 部以上作品与一份选题计划，编辑部会在 15 个工作日内回复。通过后进入 3 个月的孵化期，期间提供拍摄场地与剪辑指导。</p>
+        </details>
+        <details>
+          <summary>内容可以下载或线下放映吗？</summary>
+          <p>会员可在官网下载带水印的高清版本用于个人观看。机构用户可申请公益放映授权，用于校园、图书馆与社区活动，申请不收取授权费。</p>
+        </details>
+        <details>
+          <summary>专题更新为什么比较慢？</summary>
+          <p>每个专题都需要完成选题、采访、拍摄与三轮审核，周期通常在 4 到 8 周。《创作者的第一次》因涉及大量素人授权，从 10 月调整至 12 月上线。</p>
+        </details>
+        <details>
+          <summary>如何反馈错误或提出建议？</summary>
+          <p>每部视频下方设有「异议区」，也可通过页脚的联系邮箱提交。我们会在 7 个工作日内回复，被采纳的事实修正会在下一期标注致谢。</p>
+        </details>
+      </div>
+    </div>
+
+    <div style="margin-top:56px">
+      <h2 class="jm-h2" style="font-size:clamp(22px,2.6vw,28px)">合作品牌与伙伴</h2>
+      <p class="jm-lead" style="margin-bottom:22px">我们与注重公共表达与教育价值的机构长期合作，共同推进内容的社会责任。</p>
+      <div class="jm-partners">
+        <div class="jm-partner"><b>拾光图书馆联盟</b><span>公益放映伙伴</span></div>
+        <div class="jm-partner"><b>青梧教育研究院</b><span>内容审核顾问</span></div>
+        <div class="jm-partner"><b>南枝影像工作室</b><span>联合制作</span></div>
+        <div class="jm-partner"><b>知微剪辑实验室</b><span>教程共建</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== S8 页脚 ===== -->
+<footer class="jm-footer">
+  <div class="jm-container">
+    <div class="jm-footer-grid">
+      <div>
+        <div class="jm-footer-brand">
+          <span class="jm-brand-mark">鸠</span>
+          <b>鸠摩智性吧</b>
+        </div>
+        <p>鸠摩智性吧官方网站 | 版权所有 | 持续运营中。以理性表达与深度内容为核心，构建值得信赖的原创视频社区。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#jm-focus">焦点内容</a></li>
+          <li><a href="#jm-deep">深度解析</a></li>
+          <li><a href="#jm-topics">专题企划</a></li>
+          <li><a href="#jm-rank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#jm-authors">创作者矩阵</a></li>
+          <li><a href="#jm-comments">用户评价</a></li>
+          <li><button type="button" data-modal="jmModalSubmit" style="font-size:13.5px">投稿与共创</button></li>
+          <li><a href="#jm-news">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#jm-deep">品牌故事</a></li>
+          <li><a href="#jm-news">常见问题</a></li>
+          <li><button type="button" data-copy style="font-size:13.5px">分享本站链接</button></li>
+          <li><a href="#jm-top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="jm-footer-bottom">
+      <span>© 2017–2026 鸠摩智性吧 版权所有 · 内容均为原创或已获授权</span>
+      <span>广播电视节目制作经营许可证（示例）· 网络文化经营许可（示例） · 持续运营第 9 年</span>
+    </div>
+  </div>
+</footer>
+
+<button class="jm-top" id="jmTop" aria-label="回到顶部" type="button">↑</button>
+<div class="jm-toast" id="jmToast" role="status" aria-live="polite"></div>
+
+<!-- 投稿弹窗 -->
+<div class="jm-modal-mask" id="jmModalSubmit" role="dialog" aria-modal="true" aria-labelledby="jmModalSubmitTitle">
+  <div class="jm-modal">
+    <button class="jm-modal-close" type="button" data-close aria-label="关闭">×</button>
+    <h3 id="jmModalSubmitTitle">投稿入口 · 鸠摩智性吧</h3>
+    <p>填写以下信息，编辑部将在 15 个工作日内回复。请附上可公开访问的作品链接。</p>
+    <form id="jmSubmitForm">
+      <div class="jm-field"><label for="jmName">称呼</label><input id="jmName" type="text" placeholder="如何称呼你" required></div>
+      <div class="jm-field"><label for="jmMail">联系邮箱</label><input id="jmMail" type="email" placeholder="用于接收回复" required></div>
+      <div class="jm-field"><label for="jmTopic">选题方向</label>
+        <select id="jmTopic">
+          <option>深度访谈</option>
+          <option>知识科普</option>
+          <option>创作幕后</option>
+          <option>城市探索</option>
+          <option>实用技巧</option>
+        </select>
+      </div>
+      <div class="jm-field"><label for="jmDesc">一句话介绍你的作品</label><textarea id="jmDesc" placeholder="用一句话说清你想回答的问题" required></textarea></div>
+      <button class="jm-btn jm-btn-primary" type="submit" style="width:100%">提交投稿</button>
+    </form>
+  </div>
+</div>
+
+<!-- 作者弹窗 -->
+<div class="jm-modal-mask" id="jmModalAuthor" role="dialog" aria-modal="true" aria-labelledby="jmModalAuthorTitle">
+  <div class="jm-modal">
+    <button class="jm-modal-close" type="button" data-close aria-label="关闭">×</button>
+    <h3 id="jmModalAuthorTitle">创作者档案</h3>
+    <p id="jmModalAuthorBody">正在加载创作者信息…</p>
+    <button class="jm-btn jm-btn-primary" type="button" data-close style="width:100%">知道了</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('jmToast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('jmBurger');
+  var mobileNav = document.getElementById('jmMobileNav');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mobileNav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchForm = document.getElementById('jmSearchForm');
+  var searchInput = document.getElementById('jmSearchInput');
+  var searchTip = document.getElementById('jmSearchTip');
+  var mobileSearch = document.getElementById('jmMobileSearch');
+  var mobileSearchBtn = document.getElementById('jmMobileSearchBtn');
+
+  function doSearch(kw){
+    kw = (kw || '').trim();
+    if(!kw){
+      toast('请输入要搜索的关键词');
+      return;
+    }
+    var hint = '已为你检索「' + kw + '」相关内容：命中焦点内容 6 项、专题 3 组、创作者档案 6 份。点击下方板块可继续浏览。';
+    if(searchTip){
+      searchTip.textContent = hint;
+      searchTip.classList.add('show');
+    }
+    toast('搜索「' + kw + '」已提交');
+    if(mobileNav && mobileNav.classList.contains('open')){
+      mobileNav.classList.remove('open');
+      if(burger) burger.setAttribute('aria-expanded','false');
+    }
+  }
+  if(searchForm){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch(searchInput ? searchInput.value : '');
+    });
+  }
+  if(mobileSearchBtn){
+    mobileSearchBtn.addEventListener('click', function(){
+      doSearch(mobileSearch ? mobileSearch.value : '');
+    });
+  }
+
+  /* 点赞 +1/-1 */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('active');
+      var label = btn.textContent;
+      if(btn.closest('.jm-comment')){
+        var m = label.match(/\d+/);
+        var n = m ? parseInt(m[0],10) : 0;
+        btn.textContent = (on ? '已赞 ' : '有用 ') + (on ? n + 1 : Math.max(0, n - 1));
+        toast(on ? '感谢你的认可' : '已取消点赞');
+        return;
+      }
+      var cnt = btn.getAttribute('data-count');
+      if(cnt === null){
+        var mm = label.match(/\d+/);
+        cnt = mm ? mm[0] : '0';
+      }
+      var num = parseInt(cnt,10) || 0;
+      var now = on ? num + 1 : Math.max(0, num - 1);
+      btn.setAttribute('data-count', now);
+      btn.textContent = on ? '♥ 已赞 ' + now : '♥ 点赞 ' + now;
+      toast(on ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  });
+
+  /* 收藏切换 */
+  document.querySelectorAll('[data-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('active');
+      btn.textContent = on ? '★ 已收藏' : '★ 收藏';
+      toast(on ? '已收藏到个人片单' : '已取消收藏');
+    });
+  });
+
+  /* 复制链接 */
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function(resolve, reject){
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly','');
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        resolve();
+      }catch(err){ reject(err); }
+    });
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = '鸠摩智性吧 · 官方网站内容';
+      var card = btn.closest('.jm-video-item');
+      if(card){
+        var h = card.querySelector('h3');
+        if(h) title = h.textContent.trim();
+      }
+      copyText(title).then(function(){
+        toast('链接已复制，可以分享给朋友了');
+      }).catch(function(){
+        toast('复制失败，请手动选择文本');
+      });
+    });
+  });
+
+  /* 作者信息弹窗 */
+  var authorModal = document.getElementById('jmModalAuthor');
+  var authorTitle = document.getElementById('jmModalAuthorTitle');
+  var authorBody = document.getElementById('jmModalAuthorBody');
+  var authorInfo = {
+    '林砚舟': '前新闻记者，鸠摩智性吧官方认证创作者，主理《理性七人谈》。代表作品 214 部，粉丝 96.4 万，擅长深度访谈与公共表达。',
+    '顾青梧': '中文系出身，做过 6 年图书编辑。系列《一个词的旅行》被 30 余所中学用作课堂补充材料，作品 168 部，粉丝 72.8 万。',
+    '沈知微': '自由剪辑师，代表课程《把争论剪成观点》播放量突破 320 万。主张公开工程文件，作品 132 部，粉丝 58.1 万。',
+    '许南枝': '城市观察者，系列《街角的第三个人》口碑 9.2 分。习惯用环境声记录街区，作品 97 部，粉丝 41.6 万。',
+    '陆小满': '心理咨询师转行做内容，专注人如何面对镜头。出镜准备清单被多家机构采用，作品 88 部，粉丝 36.3 万。',
+    '周敦野': '视觉设计出身，负责鸠摩智性吧多支片头与视觉系统，作品 76 部，粉丝 29.7 万。'
+  };
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      if(authorTitle) authorTitle.textContent = name + ' · 创作者档案';
+      if(authorBody) authorBody.textContent = authorInfo[name] || '该创作者的档案正在完善中。';
+      if(authorModal) authorModal.classList.add('open');
+    });
+  });
+
+  /* 通用弹窗开关 */
+  document.querySelectorAll('[data-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-modal');
+      var target = document.getElementById(id);
+      if(target) target.classList.add('open');
+    });
+  });
+  document.querySelectorAll('.jm-modal-mask').forEach(function(mask){
+    mask.addEventListener('click', function(e){
+      if(e.target === mask || e.target.hasAttribute('data-close')){
+        mask.classList.remove('open');
+      }
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.jm-modal-mask.open').forEach(function(m){
+        m.classList.remove('open');
+      });
+      if(mobileNav){
+        mobileNav.classList.remove('open');
+        if(burger) burger.setAttribute('aria-expanded','false');
+      }
+    }
+  });
+
+  /* 投稿表单提交 */
+  var submitForm = document.getElementById('jmSubmitForm');
+  if(submitForm){
+    submitForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('jmName');
+      var mail = document.getElementById('jmMail');
+      var desc = document.getElementById('jmDesc');
+      if(!name.value.trim() || !mail.value.trim() || !desc.value.trim()){
+        toast('请完整填写必填项');
+        return;
+      }
+      var mask = document.getElementById('jmModalSubmit');
+      if(mask) mask.classList.remove('open');
+      submitForm.reset();
+      toast('投稿已成功提交，编辑部将在 15 个工作日内回复');
+    });
+  }
+
+  /* 榜单切换 */
+  var rankTabs = document.querySelectorAll('.jm-rank-tab');
+  var rankLists = document.querySelectorAll('[data-rank-list]');
+  rankTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var key = tab.getAttribute('data-rank');
+      rankTabs.forEach(function(t){
+        t.classList.remove('active');
+        t.setAttribute('aria-selected','false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      rankLists.forEach(function(list){
+        list.classList.toggle('jm-rank-hidden', list.getAttribute('data-rank-list') !== key);
+      });
+    });
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('jmTop');
+  window.addEventListener('scroll', function(){
+    if(!topBtn) return;
+    if(window.scrollY > 520) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+  }, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* 数据数字滚动（首屏统计） */
+  function animateNum(el){
+    var raw = el.textContent.trim();
+    var m = raw.match(/^([\d,\.]+)(.*)$/);
+    if(!m) return;
+    var numStr = m[1];
+    var suffix = m[2] || '';
+    var target = parseFloat(numStr.replace(/,/g,''));
+    if(isNaN(target)) return;
+    var decimals = (numStr.split('.')[1] || '').length;
+    var hasComma = numStr.indexOf(',') > -1;
+    var start = performance.now();
+    var dur = 1100;
+    function frame(t){
+      var p = Math.min(1, (t - start) / dur);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = target * eased;
+      var out;
+      if(decimals > 0){
+        out = val.toFixed(decimals);
+      }else{
+        out = String(Math.round(val));
+      }
+      if(hasComma){
+        out = out.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+      el.textContent = out + suffix;
+      if(p < 1) requestAnimationFrame(frame);
+      else el.textContent = raw;
+    }
+    requestAnimationFrame(frame);
+  }
+  var statEls = document.querySelectorAll('.jm-stat b');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateNum(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.5});
+    statEls.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+          </html>
